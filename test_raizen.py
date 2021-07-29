@@ -25,7 +25,7 @@ urllib.request.urlretrieve(dls, 'vendas-combustiveis-m3-teste.xls')
 excel = win32.gencache.EnsureDispatch('Excel.Application')
 excel.Visible = True
 wb = excel.Workbooks.Open(r"C:\Users\felipe.ferreira\Documents\Python\vendas-combustiveis-m3-teste.xls")
-
+excel.Visible = False
 
 #Sales of oil derivative fuels by UF and product
 # Definindo a tabela dinamica
@@ -115,11 +115,12 @@ try:
     # file.close()
 
     # DB CREDENTIALS
-    # server = credencials['DWBI01_DB']['server']
-    # database = credencials['DWBI01_DB']['database']
-    # username = credencials['DWBI01_DB']['user'] 
-    # password = credencials['DWBI01_DB']['password']
+    # server = credencials['DBINFPRD']['server']
+    # database = credencials['DBINFPRD']['database']
+    # username = credencials['DBINFPRD']['user'] 
+    # password = credencials['DBINFPRD']['password']
 
+    # Deixei as credenciais no codigo para que pudessem testar a resolucao do teste. (normalmente utilizaria a forma comentada acima)
     server = 'sqnprd.database.windows.net'
     database = 'DBINFPRD'
     username = 'usr_raizen'
